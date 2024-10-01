@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            background: #2AB2AF; /* Color de fondo base */
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 1100px;
+            height: 1100px;
+            background: rgba(255, 255, 255, 0.2); /* Círculo semitransparente */
+            border-radius: 50%;
+            top: -40%;
+            left: -10%;
+            backdrop-filter: blur(10px);
+            z-index: -1; /* Para que quede siempre detrás */
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 1400px;
+            height: 1400px;
+            background: rgba(255, 255, 255, 0.15); /* Círculo semitransparente */
+            border-radius: 50%;
+            top: 40%; /* Ajusta la posición para que el círculo esté superpuesto */
+            left: 45%; /* Ajusta la posición para que el círculo esté superpuesto */
+            backdrop-filter: blur(10px);
+            z-index: -1; /* Para que quede siempre detrás */
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2AB2AF;
+            font-family: Arial, sans-serif;
+        } 
+        .card {
+            background: #fff;
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            background: url('https://img.freepik.com/fotos-premium/bokeh-teal-fondo-luz-brillo-desdibujado-tarjeta-abstracta-fiesta-celebrar-efecto-brillo-festivo-fiestas-patron-magico-textura-temporada-fondo-invierno-lujoso-estandarte-diseno-moderno_301927-2972.jpg?w=1060') no-repeat center/cover;
+            height: 100px;
+        }
+        .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-top: -40px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+        .location {
+            color: #666;
+            font-size: 14px;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .card-footer div {
+            text-align: center;
+        }
+        .card-footer .number {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .card-footer .label {
+            color: #888;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <img src="https://pbs.twimg.com/profile_images/936387663334125568/gN2SioG__400x400.jpg" alt="Profile Image" class="profile-img">
+            <div class="name">Oscar Huanca <span>43</span></div>
+            <div class="location">Perú</div>
+        </div>
+        <div class="card-footer">
+            <div>
+                <div class="number">80K</div>
+                <div class="label">Followers</div>
+            </div>
+            <div>
+                <div class="number">803K</div>
+                <div class="label">Likes</div>
+            </div>
+            <div>
+                <div class="number">1.4K</div>
+                <div class="label">Photos</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
